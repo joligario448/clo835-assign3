@@ -8,10 +8,11 @@ metadata:
 spec:
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
-  # type: LoadBalancer
-  # port 80 is default when "targetPort" is not specified
+  type: LoadBalancer
+  # port 80 remain as default when "targetPort" is not specified
   ports:
-    - port: 80
+  - port: 80
+    targetPort: 80
   selector:
     app.kubernetes.io/name: guestbook
     app.kubernetes.io/component: frontend
