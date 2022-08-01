@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongo-pvc
+spec:
+  storageClassName: standard
+  resources:
+    requests:
+      storage: 4Gi
+  accessModes:
+    # Can be used by a single node at a time
+    - ReadWriteOnce
