@@ -2,11 +2,12 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: standard
+# AWSElasticBlockStore vol plugin for provisioning PVs
 provisioner: kubernetes.io/aws-ebs
 parameters:
   type: gp2
 reclaimPolicy: Retain
-# reclaimPolicy: Delete <--cleanup? save AWS/EKS credit resource as provisioner
+# reclaimPolicy: Delete <-cleanup resource after i.e. save AWS EKS credits
 allowVolumeExpansion: true
 mountOptions:
   - debug

@@ -10,7 +10,7 @@ spec:
     matchLabels:
       app.kubernetes.io/name: guestbook
       app.kubernetes.io/component: frontend
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
