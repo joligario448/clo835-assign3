@@ -1,9 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongodb-local-pvc
-  labels:
-    type: local
+  name: mongodb-local-pv
 spec:
   storageClassName: localstorage
   capacity:
