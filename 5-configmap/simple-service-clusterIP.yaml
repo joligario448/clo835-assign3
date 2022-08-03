@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-color-clusterip
+  labels:
+    app: simple-color
+spec:
+  ports:
+    # port 80 is default when "targetPort" is not specified
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: simple-color
